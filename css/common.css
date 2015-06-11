@@ -1,0 +1,367 @@
+/**
+*
+*
+*
+*
+*
+**/
+
+/*css reset*/
+
+html,body,div,p,h1,h2,h3,h4,h5,h6,table,ul,ol,dl{
+    margin: 0;
+    padding: 0;
+}
+
+ul,ol{
+    list-style: none;
+}
+
+a,a:link{
+    text-decoration: none;
+}
+
+img{
+    border:none;
+}
+
+body{
+    font-family: "微软雅黑" arial san-sefif;
+    font-size:14px;
+}
+/*css sprite*/
+
+.icon-group{
+    background:transparent url(../imgs/ico.png) no-repeat;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+/*灯光遮罩层*/
+.wrap{
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+body{
+    background: #f4f4f4;
+    color:#222;
+    position: relative;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #fff;
+    border-bottom:1px solid #e7e7e7;
+    box-shadow:0 1px 1px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.header .nav{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header .nav a.logo, .header .nav a:link.logo{
+    float: left;
+    display: inline-block;
+    width:62px;
+    height: 50px;
+    margin-right: 20px;
+    text-indent: -9999px;
+    background:transparent url("../imgs/logo.png") no-repeat 0 6px;
+}
+.header .nav ul.menuLists{
+    float: left;
+    height: 50px;
+
+}
+.header .nav ul.menuLists li{
+    float: left;
+    height: 50px;
+    text-align: center;
+}
+.header .nav ul.menuLists li a,.header .nav ul.menuLists li a{
+    color:#222;
+    width: 100px;
+    display: inline-block;
+
+}
+.header .nav ul.menuLists li a.current{
+    background: #e4e4e4;
+}
+
+.header .nav .log img{
+    height: 34px;
+    margin:8px 2px;
+    vertical-align: middle;
+}
+.main{
+    padding-top:130px;
+    padding-bottom: 60px;
+    width:1200px;
+    margin: 0 auto;
+    overflow: auto;
+}
+.main .leftSide{
+    position: relative;
+    width: 860px;
+    height: 524px;
+    float: left;
+    background: #000;
+    z-index: 0;
+}
+
+
+.main .rightSide{
+    position: relative;
+    width: 336px;
+    height: 522px;
+    float: right;
+    border:1px solid #e7e7e7;
+    background: #fff;
+}
+
+.main .rightSide ul.tabChannle{
+    width: 100%;
+    height: 40px;
+
+}
+.main .rightSide ul.tabChannle li{
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    width: 112px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.main .rightSide ul.tabChannle li.current{
+    background: #e4e4e4;
+}
+
+
+/*菜单外层显示容器*/
+.main .rightSide div.channleBox{
+    margin:0 5px;
+    border-top: 1px solid #e7e7e7;
+    overflow: hidden;
+}
+
+.main .rightSide div.channleMenu{
+    width:960px;
+    height: 300px;
+    margin-left: -640px;
+
+
+}
+.main .rightSide div.channleMenu ul{
+    float: left;
+    width:320px;
+}
+
+.main .rightSide div.channleMenu ul li{
+    float: left;
+    margin-top:10px;
+    margin-left: 10px;
+    width: 95px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+
+}
+.main .rightSide div.channleMenu ul li a,.main .main .rightSide div.channleMenu ul li a:link{
+    display: inline-block;
+    width: 95px;
+    height: 40px;
+    line-height: 40px;
+    color:#222;
+    background: #e4e4e4;
+
+}
+
+.main .rightSide div.channleMenu ul li a:hover{
+   color:#fff;
+    background: #B5E5D3;
+
+}
+
+.main .rightSide div.channleMenu ul li a.current{
+    color:#fff;
+    background: #1fAC75;
+}
+
+
+/*chatBox*/
+.rightSide .chatBox {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    right: 0px;
+    background: #fff;
+}
+.rightSide .meta{
+    position: relative;
+    width:281px;
+    height: 30px;
+    line-height: 30px;
+    padding:5px 0;
+    padding-left: 15px;
+    border-top: 3px solid #1fac75;
+    background: #fdfdfd;
+    border-bottom: 1px solid #eeeeee;
+    box-shadow: 0px 1px 1px #eeeeee;
+    cursor: pointer;
+}
+.rightSide .chatBox .meta .messageNum, .rightSide .chatBox .meta .onlinePeople{
+    width: 100px;
+    height: 100%;
+    margin-left: 30px;
+}
+.rightSide .chatBox .meta .icon-messageNum{
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height:30px;
+    background-position: -27px -43px;
+}
+.rightSide .chatBox .icon-onlinePeople{
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height:30px;
+    background-position: -27px -123px;
+}
+.rightSide .chatBox .lamp, .rightSide .chatBox  .lamp .icon-lamp{
+    position: absolute;
+    top:0;
+    right: 0;
+    background-color: #1fac75;
+    width: 40px;
+    height: 44px;
+
+}
+.rightSide .chatBox .lamp .icon-lamp{
+    display: inline-block;
+    background-position: -22px -185px;
+}
+
+.rightSide .chatContent{
+    height: 438px;
+    display: none;
+}
+
+
+
+.rightSide .chatBox .chatContent .chatLists{
+    height: 290px;
+    padding:10px;
+    overflow-y: auto;
+}
+.rightSide .chatBox .chatContent .chatLists ul{
+    min-height: 280px;
+}
+.rightSide .chatBox .chatContent .chatLists ul li{
+  margin-bottom: 8px;
+
+    overflow: auto;
+}
+.rightSide .chatBox .chatContent .chatLists ul li p{
+    line-height: 18px;
+    margin-bottom: 3px;
+    color: #333;
+}
+.rightSide .chatBox .chatContent .chatLists ul li p{
+    text-align: right;
+    font-size: 12px;
+
+}
+.rightSide .chatBox .chatContent .chatLists ul li.self p.message,.rightSide .chatBox .chatContent .chatLists ul li.other p.message{
+    text-align: left;
+
+}
+.rightSide .chatBox .chatContent .chatLists ul li.self p.message{
+    float: right;
+    padding: 5px;
+    margin-right: 10px;
+    clear: both;
+    background: #B5E5D3;
+    width: 200px;
+    border-radius: 10px;
+}
+
+.rightSide .chatBox .chatContent .chatLists ul li.other p{
+    text-align: left;
+}
+.rightSide .chatBox .chatContent .chatLists ul li.other p.message{
+    float: left;
+    padding: 5px;
+    margin-left: 10px;
+    clear: both;
+    background: #e3e3e3;
+    width: 200px;
+    border-radius: 10px;
+}
+.rightSide .chatBox .chatContent .inputBox{
+    border-top: 3px solid #1fac75;
+    padding:10px 15px;
+}
+
+.rightSide .chatBox .chatContent .inputBox textarea.message{
+    border:2px solid #1fac75;
+    width:298px;
+    height: 60px;
+    color: #3d3d3d;
+
+}
+.rightSide .chatBox .chatContent .inputBox p{
+    margin-top: 5px;
+    height: 35px;
+    line-height: 35px;
+}
+.rightSide .chatBox .chatContent .inputBox input#nickName{
+    height: 25px;
+    line-height: 29px;
+}
+
+.rightSide .chatBox .chatContent .inputBox input.subBtn{
+    width:64px;
+    height: 30px;
+    line-height: 29px;
+    color: #ffffff;
+    background-color: #eeeeee;
+    border:1px solid #1fac75;
+    cursor: pointer;
+    padding:0 5px;
+
+}
+
+/*footer*/
+.footer{
+    width: 100%;
+    height: 40px;
+    background: #FFFFFF;
+    border-top: 1px solid #e7e7e7 ;
+    box-shadow: 0 -1px 1px rgba(0,0,0,0.2);
+}
+
+.footer p{
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 40px;
+}
+
+
+
