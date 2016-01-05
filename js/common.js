@@ -24,6 +24,7 @@ $(function () {
         $(this).addClass('current');
     });
 
+
     //点击meta打开聊天框
     $('.chatBox .meta').not('.lamp').click(function(){
 
@@ -38,10 +39,10 @@ $(function () {
         chatBoxScroll=null;
     });
 
+
     //点击lamp切换背景灯
     $('.lamp').click(function(){
         var wrapDisplay = getStyle('display',$('.mask')[0]);
-
         if(wrapDisplay == "none"){
             $('.mask').css({"display":"block"});
             $('.leftSide').css({"zIndex":"4"});
@@ -54,7 +55,6 @@ $(function () {
         }
 
     });
-
     //滑动函数
     function slide(index, channleItemWidth){
         $('div.channleMenu').animate(
